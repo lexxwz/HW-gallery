@@ -97,14 +97,12 @@ function hendlerKeydown(event) {
   };
   if (event.key === 'ArrowLeft') {
     const changedImgIndex = (--refs.lightboxImage.dataset.indexInArray < 0 ? galleryItems.length - 1 : refs.lightboxImage.dataset.indexInArray);
-    console.log(changedImgIndex);
     refs.lightboxImage.src = galleryItems[changedImgIndex].original;
     refs.lightboxImage.alt = galleryItems[changedImgIndex].description;
     refs.lightboxImage.dataset.indexInArray = changedImgIndex;
   };
   if (event.key === 'ArrowRight') {
     const changedImgIndex = (++refs.lightboxImage.dataset.indexInArray >= galleryItems.length ? '0' : refs.lightboxImage.dataset.indexInArray);
-    console.log(changedImgIndex);
     refs.lightboxImage.src = galleryItems[changedImgIndex].original;
     refs.lightboxImage.alt = galleryItems[changedImgIndex].description;
     refs.lightboxImage.dataset.indexInArray = changedImgIndex;
